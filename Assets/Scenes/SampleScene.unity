@@ -461,6 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d64f96ba1d29734198d788ed222a127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Exp
+  userName: Alice
 --- !u!4 &1688646827
 Transform:
   m_ObjectHideFlags: 0
