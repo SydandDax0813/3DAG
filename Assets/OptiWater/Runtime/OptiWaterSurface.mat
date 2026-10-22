@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _BOTTOM_DISTORT
   - _CAUSTICS_ON
   - _CRESTGLOW_ON
   - _FOAM_ON
