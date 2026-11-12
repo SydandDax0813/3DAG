@@ -21,7 +21,7 @@ public class BatteryCollect : MonoBehaviour
     void Start()
     {
         // Find the GameObject
-        hud = gameObject.GetComponentsInChildren<>();
+        hud = gameObject.GetComponentsInChildren<RawImage>();
 
         // Hide the Image on Start
         hud.enabled = false;
@@ -35,7 +35,31 @@ public class BatteryCollect : MonoBehaviour
     {
         if(pickupAmount == 1)
         {
+            hud.texture = pickup1Tex;
 
+            hud.enabled = true;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        else if(pickupAmount == 2)
+        {
+            hud.textrue = pickup2Tex;
+        }
+        else if(pickupAmount == 3)
+        {
+            hud.texture = pickup3Tex;
+        }
+        else if(pickupAmount == 4)
+        {
+            hud.textrue = pickup4Tex;
+        }
+
+        else
+        {
+            hud.texture = pickup0Tex;
         }
     }
 }
