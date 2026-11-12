@@ -16,6 +16,10 @@ public class PlayerCollisions : MonoBehaviour
 
     [SerializeField] private float doorOpenTime = 3.0f
 
+
+    // Battery sound
+    [SerializeField] private AudioClip pickupCollectSound;
+
     // Start is called once before the first execution of update
     void Start()
     {
@@ -76,4 +80,23 @@ public class PlayerCollisions : MonoBehaviour
         // Stop the door timer
         startDoorTimer = false;
     }
+
+
+
+    // Pickup collection
+    void OnTriggerEnter(Collider coll)
+    {
+        if(coll.gameObject.CompareTag("pickup"))
+        {
+            PickupCollect.pickupAmount++;
+
+
+            audio.PlayOneShot(pickupCollectSound);
+
+
+            Destroy(coll.gameObject);
+        }
+    }
+
+
 }
