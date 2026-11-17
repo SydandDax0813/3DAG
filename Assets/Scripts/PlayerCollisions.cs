@@ -55,6 +55,14 @@ public class PlayerCollisions : MonoBehaviour
 
            OpenDoor(); // This is a custom method call
         }
+        else if (hit.gameObject.CompareTag("houseDoor") && PickupCollect.pickupAmount < 4)
+        {
+            PickupCollect.hud.enabled = true;
+
+            TextHints.message = "This door needed power to open...";
+
+            TextHints.textOn = true;
+        }
     }
 
     // Custom open door method
